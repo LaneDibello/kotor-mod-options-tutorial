@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: default
 title: Lane's Custom Mod Options Patch
-toc: true
 ---
 
 ## Basic Usage and Installation
