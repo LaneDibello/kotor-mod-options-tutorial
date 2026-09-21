@@ -1,7 +1,8 @@
 ---
-title: Custom Mod Options Tutorial
+layout: post
+title: Lane's Custom Mod Options Patch
+toc: true
 ---
-
 
 ## Basic Usage and Installation
 

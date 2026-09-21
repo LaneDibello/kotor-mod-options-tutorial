@@ -1,3 +1,41 @@
 title: Lane's Custom Mod Options Patch
-description: Tutorial for the KotOR Mod Options patch
-theme: jekyll-theme-minimal
+author: Lane Dibello
+description: >
+  Tutorial for the KotOR Custom Mod Options patch - installation, usage, and
+  how to author your own TOML option menus.
+
+url: https://lanedibello.github.io
+baseurl: "/kotor-mod-options-tutorial"
+
+remote_theme: abhinavs/moonwalk
+
+theme_config:
+  appearance: "dark"        # "light", "dark" or "auto"
+  appearance_toggle: true   # let readers switch
+  show_description: true
+  show_navbar: false        # single-page site, no nav needed
+  show_footer: false
+  show_copyright: true
+  show_projects: false
+  show_blog: false
+  show_old_projects: false
+  show_misc_list: false
+  show_reading_time: false
+  show_tags: false
+  show_code_copy: true      # copy button on TOML/code blocks
+  show_progress_bar: true
+  show_back_to_top: true
+  show_post_nav: false      # no prev/next, there is only one page
+  show_toc: true            # enabled per-page via "toc: true"
+  show_footnote_tooltips: true
+  show_link_previews: false
+
+highlighter: rouge
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
