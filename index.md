@@ -18,12 +18,12 @@ The Mod Options patch ships with additional file, the following of which need to
 It also ships with a `sample.toml` file, which provides examples for how to create custom option configurations. For more info see "Creating an Options Menu" below.
 
 Patches and mods that add options you want to use will ship with TOML config files. These need to be placed in a folder named 'mod options' in the game directory:  
-\<Image Here\>
+![3 TOML config files sitting in a windows directory named "Mod Options"](1.png)
 
 If no TOML files are included here the menu will appear empty in game.
 
 Ensure that both the "Mod options GUI" patch and any patches that have menus you intend to use are applied in the manager:  
-\<Image Here\>
+![KPM UI, showing botht the Expanded Vanilla Options and Mod Options GUI patches selected](2.png)
 
 Run the game by hitting the "Launch" button. You should see a button to open the mod options view on both existing options menus.
 
@@ -79,8 +79,8 @@ key = "toggleOption"
 # A description is optional, and is shown alongside the option
 description = "Description string for what this option does"
 ```
-In game this will appear as:
-\<Image Here\>
+In game this will appear like:
+![The "Toggle Option" control appearing in the menu, with its description to the right](3.png)
 
 Below is an example of a `slider` option. Useful when the option is a whole number that falls between a min and max.
 ```toml
@@ -103,7 +103,7 @@ key = "sliderOption"
 description = "How much of the sample effect to apply."
 ```
 In game this will appear as:
-\<Image Here\>
+![The "Slider Option" control appearing in the menu, with its description to the right](4.png)
 
 Below is a `list` option. Used when an option has several different choices to pick from.
 ```toml
@@ -122,7 +122,7 @@ key = "listOption"
 description = "Which sample variant to use."
 ```
 In game this will appear as:
-\<Image Here\>
+![The "List Option" control, currenlty showing the 'B' option](5.png)
 
 Below is a `text` option. Used when we need to be able to accept any input from the user.
 ```toml
@@ -139,7 +139,7 @@ key = "textOption"
 description = "Free-form sample text."
 ```
 In game this will appear as:
-\<Image Here\>
+![The "Text Option" control, showing an active text box that reads "Typing here_"](6.png)
 
 ### For Mod makers
 Mods alone are a bit limited in the range of capabilities they can build into a menu.
@@ -222,7 +222,7 @@ function = "SampleFunction"
 description = "Runs the sample handler straight away."
 ```
 In game this will appear as:
-\<Image Here\>
+![The "Button Option" control, currently hilighted](image.png)
 
 In addition to the script-extender method described in the "For Mod makers" section above, patches can also directly read the ini files. This can be done directly using any ordinary C++ plain-text file handling logic. It can also be accomplished using the GameAPI class `CExoIni`, which exposes it's own `ReadIniEntry` and `WriteIniEntry` functions that work identically to the script extender ones.
 
