@@ -53,7 +53,10 @@ h3, h4, h5, h6 { color: #dcdcdc; }
 strong, dt, th { color: #fff; }
 a { color: $link; }
 
-code { color: #e6e6e6; }
+// Inline code only. The theme sets `pre code` at higher specificity, but
+// restate it so a fenced block never picks up the inline color.
+code { color: #00AFFF; }
+pre code { color: #f8f8f2; }
 
 blockquote {
   background: rgba(#fff, 0.06);
