@@ -1,0 +1,81 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// ---------------------------------------------------------------------------
+// Dark overrides for jekyll-theme-modernist.
+// Everything below replaces a value set in _sass/jekyll-theme-modernist.scss.
+// ---------------------------------------------------------------------------
+
+$page-bg:    #000;      // was a #6C7989 -> #434B55 gradient
+$panel-bg:   #2b2b2b;   // was a #fafafa -> #DEDEDE gradient
+$body-text:  #d4d4d4;   // was #555
+$heading:    #f2f2f2;   // was #222
+$link:       #6cb6ff;   // was #069
+$rule:       #444;
+$column:     962px;     // was 740px, +30%
+$footer-col: 832px;     // was 640px, kept in proportion
+
+html {
+  background: $page-bg;   // drop the gradient entirely
+}
+
+body {
+  background: $page-bg;   // drop the checker.png texture
+  color: $body-text;
+}
+
+.wrapper {
+  width: $column;
+  background: $panel-bg;
+}
+
+section {
+  background: $panel-bg;  // solid, so long pages don't fade out partway down
+  border-top: 1px solid $rule;
+}
+
+// Header: the stock pale-blue gradient fights a black page.
+header {
+  background: #1b1b1b;
+  border-bottom: 1px solid $rule;
+
+  h1 { color: $heading; text-shadow: none; }
+  p  { color: #9aa4ad; }
+  p.view a { color: $link; }
+}
+
+// Legibility on the dark panel.
+h1, h2, h3, h4, h5, h6 { color: $heading; }
+h2 { color: #e6e6e6; }
+h3, h4, h5, h6 { color: #dcdcdc; }
+strong, dt, th { color: #fff; }
+a { color: $link; }
+
+code { color: #e6e6e6; }
+
+blockquote {
+  background: rgba(#fff, 0.06);
+  color: $body-text;
+}
+
+th, td { border-bottom: 1px solid $rule; }
+hr { background: $rule; }
+
+kbd {
+  background-color: #333;
+  border: 1px solid #555;
+  border-bottom-color: #222;
+  box-shadow: inset 0 -1px 0 #222;
+  color: #e6e6e6;
+}
+
+footer { width: $footer-col; }
+
+// The theme collapses the column at 740px; move that to the new width
+// so the page doesn't overflow between 740px and 962px.
+@media print, screen and (max-width: $column) {
+  .wrapper { width: 100%; border-radius: 0; box-shadow: none; }
+  footer   { width: auto; }
+}
